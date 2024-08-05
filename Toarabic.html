@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="texto">
+                <h2>De: Romano</h2>
+                <h2>Para: Arábico</h2>
+            </div>
+            <a href="index.html">
+                <div class="botao_troca">
+                    <img src="troca.png" alt="" width="50px">
+                </div>
+            </a>
+        </div>
+        <form action="processamento.php" method="post">
+            <input type="hidden" name="funcao" value="arabic">
+            <input id="romanos" type="text" pattern="[IVXLCDMivxlcdm]+" placeholder="Digite aqui..."  oninput="validar(this)" name="Entrada" required>
+            <script> //verificar se são digitos romanos
+                function validar(input) {
+                    input.value = input.value.toUpperCase().replace(/[^IVXLCDM]/g, '');
+                }
+            </script>
+            <button class="botao_envio" type="submit"> Converter</button>
+        </form>
+    </div>
+    <h5>TESTE PRÁTICO DEMANDER</h5>
+</body>
+</html>

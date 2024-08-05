@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="texto">
+                <h2>De: Arábico</h2>
+                <h2>Para: Romano</h2>
+            </div>
+            <a href="Toarabic.html">
+                <div class="botao_troca">
+                    <img src="troca.png" alt="" width="50px">
+                </div>
+            </a>
+        </div>
+        <form action="processamento.php" method="post">
+            <input type="hidden" name="funcao" value="romano">
+            <input type="number" pattern="[0-9]+" max="3999" min="1" placeholder="Digite aqui..." name="Entrada" required>
+            <button class="botao_envio" type="submit"> Converter</button>
+        </form>
+    </div>
+    <h5>TESTE PRÁTICO DEMANDER</h5>
+</body>
+</html>
